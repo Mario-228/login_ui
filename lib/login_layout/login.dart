@@ -4,8 +4,8 @@ import 'package:login_ui/reusable_components/custom_text_button.dart';
 import 'package:login_ui/reusable_components/functions.dart';
 import 'package:login_ui/reusable_components/reusable_components.dart';
 import 'package:login_ui/register_layout/register.dart';
-import 'package:login_ui/social_login_cubit/login_cubit.dart';
-import 'package:login_ui/social_login_cubit/login_state.dart';
+import 'package:login_ui/login_cubit/login_cubit.dart';
+import 'package:login_ui/login_cubit/login_state.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -55,18 +55,17 @@ class Login extends StatelessWidget {
                     height: 20.0,
                   ),
                   BlocProvider(
-                    create: (context) => SocialLoginCubit(),
-                    child: BlocBuilder<SocialLoginCubit, SocialLoginStates>(
+                    create: (context) => LoginCubit(),
+                    child: BlocBuilder<LoginCubit, LoginStates>(
                       builder: (context, state) => DefaultFormField(
                         type: TextInputType.visiblePassword,
                         controller: pass,
-                        isPassword: SocialLoginCubit.get(context).isShown,
+                        isPassword: LoginCubit.get(context).isShown,
                         prefixIcon: Icons.password,
-                        suffixIcon: SocialLoginCubit.get(context).passwordIcon,
+                        suffixIcon: LoginCubit.get(context).passwordIcon,
                         onError: "Password must not be empty",
                         label: "Password",
-                        onPressed:
-                            SocialLoginCubit.get(context).changeVisibility,
+                        onPressed: LoginCubit.get(context).changeVisibility,
                       ),
                     ),
                   ),

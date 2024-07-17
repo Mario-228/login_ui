@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'login_state.dart';
 
-class SocialLoginCubit extends Cubit<SocialLoginStates> {
-  SocialLoginCubit() : super(SocialInitialState());
+class LoginCubit extends Cubit<LoginStates> {
+  LoginCubit() : super(InitialState());
 
-  static SocialLoginCubit get(context) => BlocProvider.of(context);
+  static LoginCubit get(context) => BlocProvider.of(context);
 
   bool isShown = true;
   IconData passwordIcon = Icons.visibility_off;
@@ -16,6 +16,6 @@ class SocialLoginCubit extends Cubit<SocialLoginStates> {
     } else {
       passwordIcon = Icons.visibility;
     }
-    emit(SocialChangePasswordState());
+    emit(ChangePasswordState());
   }
 }

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:login_ui/reusable_components/functions.dart';
 import 'package:login_ui/reusable_components/reusable_components.dart';
-import 'package:login_ui/social_register_cubit/register_cubit.dart';
-import 'package:login_ui/social_register_cubit/register_states.dart';
+import 'package:login_ui/register_cubit/register_cubit.dart';
+import 'package:login_ui/register_cubit/register_states.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
