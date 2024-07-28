@@ -9,6 +9,10 @@ abstract class Styles {
     fontSize: 20.0,
     color: Colors.grey,
   );
+  static const TextStyle textStyle30 = TextStyle(
+    fontSize: 30.0,
+    fontWeight: FontWeight.bold,
+  );
   static const TextStyle textStyle40 = TextStyle(
     fontSize: 40.0,
     fontWeight: FontWeight.bold,
