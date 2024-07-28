@@ -13,8 +13,7 @@ class HeadingMessengerView extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 20.0,
-          backgroundImage: NetworkImage(
-              "https://img.freepik.com/free-vector/mysterious-gangster-character-illustration_23-2148460670.jpg?t=st=1722185763~exp=1722189363~hmac=2a44d45d38eca3cd3aca7a2f82b32a0eae96b90039f1fce60b0dcd15cb0cd7fb&w=740"),
+          backgroundImage: NetworkImage("https://i.pravatar.cc/300"),
         ),
         SizedBox(
           width: 15.0,
